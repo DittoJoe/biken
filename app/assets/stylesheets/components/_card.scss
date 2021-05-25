@@ -1,0 +1,40 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card-bike-each img {
+  object-fit: cover;
+  height: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 80%;
+  margin-top: 8px;
+}
+
+h2 {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  justify-text: center;
+}
+
+.card-bike-each a {
+  font-size: 12px;
+  opacity: .7;
+  margin-bottom: 8px;
+  margin-block-end: 8px;
+  color: black;
+}
+
+.bike-price-info h2 {
+  width: 80%;
+  padding: 8px;
+  display: grid;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
