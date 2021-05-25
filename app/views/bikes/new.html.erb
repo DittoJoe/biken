@@ -1,10 +1,12 @@
-<div class="container col-6 col-offset-5 mt-5">
+
+<div class="container col-6 col-offset-5 mt-5 bg-white py-5 px-4">
   <div>
-    <h2 class="text-center m-3">New list</h2>
-    <%= simple_form_for(@list) do |f| %>
+    <h2 class="text-center m-3 ">Add your bike</h2>
+    <%= simple_form_for(@bike) do |f| %>
       <%= f.input :name %>
       <%= f.input :details %>
-      <%= f.submit class: "btn btn-primary w-100" %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: "btn btn-success w-100" %>
     <% end %>
   </div>
 </div>
