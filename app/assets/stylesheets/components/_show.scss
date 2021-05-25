@@ -1,0 +1,51 @@
+
+.card-trip {
+  display: flex;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  top: -150px;
+}
+
+.card-trip p {
+  font-size: 18px;
+  opacity: .7;
+  margin: 0;
+  position: relative;
+  top: -150px;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: relative;
+  left: 148px;
+  top: 130px;
+  width: 60px;
+}
+
+.card-trip-infos .card-trip-pricing {
+  position: relative;
+  left: 280px;
+  top: 180px;
+}

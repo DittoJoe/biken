@@ -1,20 +1,19 @@
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @bike.name %>
-</p>
+<div class="card-trip">
+  <img src="https://quickbutik.imgix.net/4582H/products/5bbc97e2b880c.png" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @bike.name %></h2>
+      <p> <%= @bike.details %> by <strong><%= @bike.user.email %></strong>.</p>
+    </div>
+    <h2 class="card-trip-pricing">99.99 SEK</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
 
-<p>
-  <strong>details:</strong>
-  <%= @bike.details %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @bike.user.email %>
-</p>
 
 <%= link_to 'Edit', edit_bike_path(@bike) %> |
 <%= link_to 'Back', bikes_path %>
+
+
