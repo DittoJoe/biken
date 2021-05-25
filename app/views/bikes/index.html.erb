@@ -1,1 +1,16 @@
-<h1>hello</h1>
+<div class="container">
+
+      <div class="cards">
+	    <% @bikes.each do |bike| %>
+	      <div class="card-bike-each">
+		     <strong><%= link_to bike.name, bike_path(bike) %></strong>
+		    <img class="bike-card-image" src="https://source.unsplash.com/random"/>
+			<div class="bike-price-info">
+		      <h2 class="text-center">4.99€</h2>
+			</div>
+	      </div>
+	    <% end %>
+	  </div>
+</div>
+
+
