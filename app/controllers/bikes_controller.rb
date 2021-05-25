@@ -2,12 +2,12 @@ class BikesController < ApplicationController
   def index
     @bikes = policy_scope(Bike)
   end
-  
+
   def show
     @bike = Bike.find(params[:id])
     authorize @bike
   end
-  
+
   def new
     @bike = Bike.new
     authorize @bike
@@ -21,5 +21,11 @@ class BikesController < ApplicationController
     else
       render :new
     end
+  end
+
+  private
+
+  def bike_params
+    params.require(:bike).permit(:name, :details)
   end
 end
