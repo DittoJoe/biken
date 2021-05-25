@@ -1,4 +1,8 @@
 class BikesController < ApplicationController
+  def index
+    @bikes = policy_scope(Bike)
+  end
+  
   def new
     @bike = Bike.new
     authorize @bike

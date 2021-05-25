@@ -8,4 +8,8 @@ class BikePolicy < ApplicationPolicy
   def create?
     return true
   end
+
+  def index?
+    true
+  end
 end
