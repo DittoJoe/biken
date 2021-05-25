@@ -3,6 +3,11 @@ class BikesController < ApplicationController
     @bikes = policy_scope(Bike)
   end
   
+  def show
+    @bike = Bike.find(params[:id])
+    authorize @bike
+  end
+  
   def new
     @bike = Bike.new
     authorize @bike
