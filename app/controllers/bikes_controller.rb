@@ -13,4 +13,10 @@ class BikesController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def bike_params
+    params.require(:bike).permit(:name, :details)
+  end
 end
