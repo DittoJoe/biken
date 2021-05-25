@@ -1,19 +1,20 @@
 
-
-<div class="card-trip">
-  <img src="https://quickbutik.imgix.net/4582H/products/5bbc97e2b880c.png" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= @bike.name %></h2>
-      <p> <%= @bike.details %> by <strong><%= @bike.user.email %></strong>.</p>
+<div class="container mt-5">
+  <div class="card-trip">
+    <img src="https://quickbutik.imgix.net/4582H/products/5bbc97e2b880c.png" />
+    <div class="card-trip-infos">
+      <div>
+        <h2 class="bike"><%= @bike.name %></h2>
+        <p> <%= @bike.details %> by <strong><%= @bike.user.email %></strong>.</p>
+      </div>
+      <h2 class="card-trip-pricing">99.99 SEK</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing">99.99 SEK</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
+  <%= link_to 'Edit', edit_bike_path(@bike) %> |
+  <%= link_to 'Back', bikes_path %>
 </div>
 
 
-<%= link_to 'Edit', edit_bike_path(@bike) %> |
-<%= link_to 'Back', bikes_path %>
 
 

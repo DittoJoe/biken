@@ -12,8 +12,8 @@
   object-fit: cover;
 }
 
-.card-trip h2 {
-  font-size: 26px;
+.card-trip .bike {
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
   position: relative;
@@ -21,7 +21,7 @@
 }
 
 .card-trip p {
-  font-size: 18px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
   position: relative;
@@ -37,15 +37,20 @@
   position: relative;
 }
 
+h2 {
+  font-size: 15px;
+}
+
 .card-trip-infos .card-trip-user {
-  position: relative;
-  left: 148px;
-  top: 130px;
-  width: 60px;
+  position: absolute;
+  left: 460px;
+  top: 326px;
+  width: 50px;
 }
 
 .card-trip-infos .card-trip-pricing {
-  position: relative;
-  left: 280px;
-  top: 180px;
+  position: absolute;
+  left: 20px;
+  top: 350px;
 }
+
