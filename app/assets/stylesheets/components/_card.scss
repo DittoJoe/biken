@@ -1,10 +1,13 @@
+
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 strong {
-  color: black;
+  font-weight: thin;
+  color: rgb(70, 70, 70);
 }
 
 .card-bike-each img {
@@ -16,20 +19,23 @@ strong {
   border-radius: 4px;
 }
 
+.card-bike-each img:hover { 
+  border: 4px solid white;
+} 
+
 h2 {
   display: flex;
   font-size: 20px;
   font-weight: bold;
   margin: 0;
-  justify-text: center;
   margin-bottom: 18px;
 }
 
 
 h3 {
-  font-weight: semi-bold;
   justify-text: center;
   font-size: 28px;
+  color: rgb(70, 70, 70)
 }
 
 .card-bike-each a {
@@ -42,7 +48,7 @@ h3 {
 
 .bike-price-info h2 {
   border-radius: 4px;
-  color: black;
+  color: rgb(70, 70, 70);
   width: 90%;
   padding: 8px;
   display: grid;
