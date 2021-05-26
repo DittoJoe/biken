@@ -11,8 +11,8 @@ cristina = User.create(email: 'cristina@example.com', password: '123456')
 mikael = User.create(email: 'mikael@example.com', password: '123456')
 joe = User.create(email: 'joe@example.com', password: '123456')
 
-5.times do
+9.times do
   name = Faker::Games::Pokemon.name
   details = Faker::Creature::Horse.breed
-  Bike.create(name: name, details: details, user_id: rand(1..4))
+  Bike.create(name: name, details: details, user_id: rand(1..4), address: 'Drottninggatan 82')
 end
