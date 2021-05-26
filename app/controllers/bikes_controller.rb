@@ -6,6 +6,14 @@ class BikesController < ApplicationController
   def show
     @bike = Bike.find(params[:id])
     authorize @bike
+    @bike_arr = []
+    @bike_arr << @bike
+    @markers = @bike_arr.map do |bike|
+      {
+        lat: bike.latitude,
+        lng: bike.longitude
+      }
+    end
   end
 
   def new
