@@ -10,8 +10,8 @@ class BikesController < ApplicationController
     @bike_arr << @bike
     @markers = @bike_arr.map do |bike|
       {
-        lat: bike.latitude,
-        lng: bike.longitude
+        lat: bike.latitude.nil? ? 59.3354662 : bike.latitude,
+        lng: bike.longitude.nil? ? 18.0600026 : bike.longitude
       }
     end
   end
