@@ -1,1 +1,29 @@
-// Specific CSS for your home-page
+.home_page .moving {
+  width:100%;
+  height:0;
+  padding-bottom:100%;
+  position:relative;
+}
+
+#home_page {
+  text-align: center;
+  background-color: #daaf1d;
+}
+
+#home_page h1 {
+  -webkit-text-stroke: 2px black;
+  font-size:58px;
+  font-family: 'Reggae One', cursive;
+  color: black;
+  box-shadow: 3px;
+}
+
+#home_page a {
+  text-decoration: none;
+  font-size:32px;
+  color: black;
+  font-family: 'Righteous', cursive;
+  &:hover {
+    -webkit-text-stroke: 2px white;
+  }
+}
