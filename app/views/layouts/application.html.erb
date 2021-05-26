@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<div class=”main-container”>
   <head>
     <title>Biken</title>
     <%= csrf_meta_tags %>
@@ -14,16 +13,14 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="main-container">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 
-  <div class="container">
-    <footer>
-      <%= render 'shared/footer' %>
-    </footer>
-  </div>
 
-</div>
+
 </html>

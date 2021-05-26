@@ -1,12 +1,4 @@
 
-
-* {
- box-sizing: border-box;
-}
-*:before,
-*:after {
- box-sizing: border-box;
-}
 html,
 body {
  height: 100%;
@@ -23,7 +15,7 @@ body {
  position: absolute;
  bottom: 0;
  width: 100%;
- right: -680px;
+ height: 100px;
 }
 
 .footer .fa-heart {
