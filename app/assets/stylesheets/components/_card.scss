@@ -1,34 +1,49 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+strong {
+  color: black;
 }
 
 .card-bike-each img {
   object-fit: cover;
-  height: 200px;
+  height: 150px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 80%;
-  margin-top: 8px;
+  width: 90%;
+  margin-top: 4px;
+  border-radius: 4px;
 }
 
 h2 {
   display: flex;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
   justify-text: center;
+  margin-bottom: 18px;
+}
+
+
+h3 {
+  font-weight: semi-bold;
+  justify-text: center;
+  font-size: 28px;
 }
 
 .card-bike-each a {
   font-size: 12px;
   opacity: .7;
-  margin-bottom: 8px;
-  margin-block-end: 8px;
+  margin-bottom: 2px;
+  margin-block-end: 2px;
   color: black;
 }
 
 .bike-price-info h2 {
-  width: 80%;
+  border-radius: 4px;
+  color: black;
+  width: 90%;
   padding: 8px;
   display: grid;
   justify-content: center;
@@ -36,5 +51,5 @@ h2 {
   position: relative;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
