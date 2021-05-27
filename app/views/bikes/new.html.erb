@@ -4,6 +4,7 @@
     <%= simple_form_for(@bike) do |f| %>
       <%= f.input :name %>
       <%= f.input :details %>
+      <%= f.input :address %>
       <%= f.input :photo, as: :file %>
       <%= f.submit class: "btn btn-success w-100" %>
     <% end %>

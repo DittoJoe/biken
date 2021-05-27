@@ -1,0 +1,21 @@
+.box-center h2 {
+  font-size: 32px;
+}
+
+#link_s{
+  padding-left: 12px;
+}
+
+.box-center {
+
+  top: 50%; /* IMPORTANT */
+  left: 50%; /* IMPORTANT */
+  display: block;
+  position: absolute;
+  width: 750px;
+  height: 480px;
+
+  margin-top: -240px; /* HALF OF THE HEIGHT */
+  margin-left: -375px; /* HALF OF THE WIDTH */
+
+}
