@@ -7,10 +7,13 @@
   }
 }
 
+.search-bar {
+	display: flex;
+}
+
 #form-title {
   display: flex;
   justify-content: center;
   font-size: 24px;
   margin-bottom: 16px;
 }
-
