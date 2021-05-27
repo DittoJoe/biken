@@ -18,12 +18,29 @@
   box-shadow: 3px;
 }
 
-#home_page a {
+.btn-links a {
   text-decoration: none;
   font-size:32px;
   color: black;
-  font-family: 'Righteous', cursive;
+  font-family: 'Amatic SC', cursive;
   &:hover {
-    -webkit-text-stroke: 2px white;
+   color: white;
   }
 }
+
+.btn-links .btn-outline-dark {
+  //border: transparent;
+  border-radius: 20px;
+  background-color: #f7d567;
+  &:hover {
+    background-color: black;
+  }
+}
+
+.btn-links {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #daaf1d;
+  }
