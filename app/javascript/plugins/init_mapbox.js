@@ -21,3 +21,4 @@ const initMapbox = () => {
 };
 
 export { initMapbox };
+

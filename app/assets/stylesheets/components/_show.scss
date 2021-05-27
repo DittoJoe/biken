@@ -1,56 +1,51 @@
-
 .card-trip {
-  display: flex;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-trip > img {
-  height: 400px;
-  width: auto;
+  height: 260px;
+  width: 100%;
   object-fit: cover;
 }
 
-.card-trip .bike {
-  font-size: 22px;
+.card-trip h2 {
+  font-size: 24px;
   font-weight: bold;
-  margin: 0;
-  position: relative;
-  top: -150px;
+  margin: 16px 0;
+}
+
+.card-trip h3 {
+  font-size: 16px;
+  margin: 16px 0;
 }
 
 .card-trip p {
-  font-size: 16px;
+  font-size: 12px;
   opacity: .7;
   margin: 0;
-  position: relative;
-  top: -150px;
 }
 
 
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   position: relative;
-}
-
-h2 {
-  font-size: 15px;
 }
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  left: 460px;
-  top: 326px;
-  width: 50px;
+  right: 16px;
+  top: -20px;
+  width: 40px;
 }
 
-.card-trip-infos .card-trip-pricing {
+.card-trip-pricing {
   position: absolute;
-  left: 20px;
-  top: 350px;
+  top: 290px;
+  left: 320px;
+  font-size: 16px!important;
 }
-

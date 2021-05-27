@@ -1,8 +1,9 @@
 .show-container {
   display: flex;
-  height: 80vh;
+  height: 71vh;
+  margin: 32px;
 }
 
-.mapboxgl-canvas {
-  height: 100%
+#map {
+  margin-left: 16px;
 }
