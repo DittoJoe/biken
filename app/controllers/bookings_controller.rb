@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
 
   def index
-    @bikes = policy_scope(Bike)
     @bookings = policy_scope(Booking)
   end
 

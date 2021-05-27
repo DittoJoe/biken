@@ -1,0 +1,28 @@
+
+  <h1> Hi <%= @user.email %> this are the bikes you have booked</h1>
+
+  <div class="d-flex flex-row bd-highlight mb-3">
+    <div class="card" style="width: 18rem;">
+    <% @bookings.each do |booking| %>
+      <%= cl_image_tag booking.bike.photo.key, class: "card-img-top" %>
+      <div class="card-body">
+      <h2 class="card-title"><%= booking.bike.name %></h2>
+      <p class="card-text">Your booking is <strong><%= booking.status %></strong>🚲</p>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
+  <h1>This are your bikes</h1>
+  <div class="d-flex flex-row bd-highlight mb-3">
+    <div class="card" style="width: 18rem;">
+    <% @user.bikes.each do |bike| %>
+        <%= cl_image_tag bike.photo.key, class: "card-img-top" %>
+        <div class="card-body">
+        <h2 class="card-title"><%= bike.name %></h2>
+        <p class="card-text"><%= bike.details %></p>
+       </div>
+    <% end %>
+    </div>
+  </div>
+
