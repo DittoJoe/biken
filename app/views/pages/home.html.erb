@@ -1,6 +1,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 </style>
 
 <div id="home_page">
@@ -9,7 +9,9 @@
   <div class="moving">
     <img src="https://media.giphy.com/media/3o6ZtekN7LuGnulfAQ/giphy.gif">
   </div>
-  <p><%= link_to "START", bikes_path %></p>
 </div>
-
+<div class="btn-links">
+    <button type="button" class="btn btn-outline-dark mx-4"><%= link_to "Rent a bike", bikes_path %></button>
+    <button type="button" class="btn btn-outline-dark mx-4"><%= link_to "Rent your bike", new_bike_path %></button>
+  </div>
 

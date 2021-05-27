@@ -1,4 +1,3 @@
-
 html,
 body {
  height: 100%;
@@ -16,8 +15,14 @@ body {
  bottom: 0;
  width: 100%;
  height: 100px;
+ background-color: white;
+ font-size: 22px;
 }
 
 .footer .fa-heart {
   color: #D23333;
+}
+
+.footer-copyright :hover {
+  color: lightgray;
 }
