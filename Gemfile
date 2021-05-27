@@ -24,9 +24,12 @@ gem 'pundit'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-gem 'cloudinary'
+gem 'cloudinary' , '~> 1.16.0'
 gem 'geocoder'
 gem 'algoliasearch-rails'
+gem "mini_magick"
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
