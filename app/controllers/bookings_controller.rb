@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+
+  def index
+    @bookings = policy_scope(Booking)
+  end
+  
   def new
     @booking = Booking.new
     @bike = Bike.find(params[:bike_id])
