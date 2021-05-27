@@ -165,7 +165,7 @@ bike_eleven.photo.attach(io: handle_string_io_as_file(file, 'image.png'), filena
 bike_eleven.save
 
 
-bike_twelve = Bike.new(name: "Bike for 2!", details: 'Brand new bike for 2 with 21 gears! Lots of fun with two persons on 1 bike, and if you sit in the back just relax ;)', user_id: mikael.id, address: "gamla stan")
+bike_twelve = Bike.new(name: "Bike for 2!", details: 'Brand new bike for 2 with 21 gears! Lots of fun with two persons on 1 bike. If you sit in the back just relax ;)', user_id: mikael.id, address: "gamla stan")
 file = URI.open('https://www.cykellagret.se/productfiles/images/2/2535ba0e-654b-4ab1-a74d-aa5c73adc26e_large.jpg')
 bike_twelve.photo.attach(io: handle_string_io_as_file(file, 'image.png'), filename: 'bike_twelve.png', content_type: 'image/png')
 bike_twelve.save
