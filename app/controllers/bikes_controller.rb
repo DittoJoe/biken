@@ -1,6 +1,18 @@
 class BikesController < ApplicationController
   def index
     @bikes = policy_scope(Bike)
+    if params[:query].present?
+      @bikes = Bike.where(address: params[:query])
+        if @bikes.empty?
+          flash[:alert] = "No results found"
+          @bikes = Bike.all
+        else
+           @bikes
+        end
+    else
+      flash[:alert] = "please type a city"
+      @bikes = Bike.all
+    end
   end
 
   def show
