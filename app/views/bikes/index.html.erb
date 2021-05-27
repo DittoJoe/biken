@@ -5,7 +5,7 @@
     <%= link_to bike_path(bike) do   %>
 	  <div class="card-bike-each">
 		<strong><%= bike.name %></strong>
-		<%= image_tag 'bike1.jpg', class: "bike-card-image" %>
+		<%= cl_image_tag bike.photo.key, class: "bike-card-image" %>
 		<div class="bike-price-info">
 		  <h2>99.99 SEK</h2>
 		</div>
