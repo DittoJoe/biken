@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
 
   def index
+    @bikes = policy_scope(Bike)
     @bookings = policy_scope(Booking)
   end
-  
+
   def new
     @booking = Booking.new
     @bike = Bike.find(params[:bike_id])
@@ -30,3 +31,5 @@ class BookingsController < ApplicationController
     params.permit(:bike_id, :user_id)
   end
 end
+
+#user.bike.booking
