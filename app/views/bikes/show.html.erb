@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="show-container">
   <div class="card-trip">
     <% if @bike.photo.attached? %>
     <%= cl_image_tag @bike.photo.key %>
@@ -8,17 +8,18 @@
     <div class="card-trip-infos">
       <div>
         <h2 class="bike"><%= @bike.name %></h2>
-        <p> <%= @bike.details %> by <strong><%= @bike.user.email %></strong>.</p>
+        <h3><%= @bike.details %></h3>
+        <p><strong>Uploaded by <%= @bike.user.email %></strong></p>
       </div>
       <h2 class="card-trip-pricing">99.99 SEK</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      <%= cl_image_tag '11276241_890671564313185_1851098347_n.jpg_fb3oxk', class: "card-trip-user avatar-bordered" %>
     </div>
-  </div>|
-  <%= link_to 'Back', bikes_path %>
+  </div>
   <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
 
