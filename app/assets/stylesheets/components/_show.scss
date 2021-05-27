@@ -2,12 +2,14 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid #919191;
 }
 
 .card-trip > img {
   height: 260px;
   width: 100%;
   object-fit: cover;
+  border-bottom: 1px solid #919191;
 }
 
 .card-trip h2 {
@@ -46,6 +48,6 @@
 .card-trip-pricing {
   position: absolute;
   top: 280px;
-  left: 280px;
+  right: 20px;
   font-size: 16px!important;
 }
