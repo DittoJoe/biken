@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to bike_bookings_path
+      redirect_to "/users/#{current_user.id}"
     else
       render :new
     end
@@ -28,6 +28,12 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.permit(:bike_id, :user_id)
+  end
+
+  def change_status
+    @booking = Booking.find(params[:id])
+    @booking.update(status: "#{params[:status]}ed")
+    redirect_to "/users/#{current_user.id}", notice: "Status updated!"
   end
 end
 

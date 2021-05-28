@@ -6,6 +6,7 @@
       <p><%= @booking.user.email %></p>
       <h2>To rent:</h2>
       <p><%= @bike.name %></p>
+      <%= cl_image_tag @bike.photo.key, id: "form-photo"  %>
       <%= f.submit class: "btn btn-success w-100" %>
     <% end %>
   </div>

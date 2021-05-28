@@ -8,12 +8,12 @@
       <div class="card-user-infos">
         <h2><%= booking.bike.name %></h2>
         <p>Your booking is <strong><%= booking.status %></strong> 🚲.</p>
+        <%= link_to 'Cancel', change_status_user_path(booking, status: 'cancell'), method: :patch, class: 'btn btn-primary'  %>
+      </div>
     </div>
-   </div>
   <% end %>
-
-
-  <h3>Your booking request</h3>
+  
+  <h3>Your booking requests</h3>
   <% @booking_requests.each do |booking| %>
     <div class="card-user">
       <%= cl_image_tag booking.bike.photo.key, class: "image" %>
@@ -22,7 +22,10 @@
         <h6>Request from <%= booking.user.email %></h6>
         <p>The status is <strong><%= booking.status %></strong> 🚲.</p>
         <p> <%= booking.created_at %></p>
+        <%= link_to 'Accept', change_status_user_path(booking, status: 'accept'), method: :patch, class: 'btn btn-primary'  %>
+        <%= link_to 'Decline', change_status_user_path(booking, status: 'declin'), method: :patch, class: 'btn btn-primary'  %>
     </div>
    </div>
   <% end %>
 </div>
+
