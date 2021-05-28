@@ -1,7 +1,6 @@
 <div class="container">
     <h1 id="hi-user">Hi <%= @user.email.split("@").first.capitalize %></h1>
     <h3>Your bookings</h3>
-
     <div class="cards">
       <% @bookings.each do |booking| %>
         <div class="card-user">

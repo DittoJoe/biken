@@ -1,7 +1,3 @@
-
-
-
-
 require 'open-uri'
 def handle_string_io_as_file(io, filename)
   return io unless io.class == StringIO

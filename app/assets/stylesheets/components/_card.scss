@@ -12,7 +12,7 @@ strong {
   object-fit: cover;
   height: 150px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 400px;
+  width: 90%;
   margin-top: 4px;
   border-radius: 4px;
 }
@@ -29,6 +29,11 @@ h2 {
   margin-bottom: 18px;
 }
 
+#bike-price {
+  color: rgb(70, 70, 70);
+  font-size: 16px;
+  justify-text: right;
+}
 
 h3 {
   justify-text: center;
@@ -50,10 +55,9 @@ h3 {
   width: 90%;
   padding: 8px;
   display: grid;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   position: relative;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  grid-template-columns: 1fr 1fr 1fr;
 }
