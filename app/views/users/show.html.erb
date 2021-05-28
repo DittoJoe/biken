@@ -21,7 +21,7 @@
         <h2><%= booking.bike.name %></h2>
         <h6>Request from <%= booking.user.email %></h6>
         <p>The status is <strong><%= booking.status %></strong></p>
-        <p> <%= booking.created_at %></p>
+        <p> <%= booking.created_at.strftime("%a %b %e %T") %></p>
         <%= link_to 'Accept', change_status_user_path(booking, status: 'accept'), method: :patch, class: 'btn btn-primary'  %>
         <%= link_to 'Decline', change_status_user_path(booking, status: 'declin'), method: :patch, class: 'btn btn-primary'  %>
     </div>
