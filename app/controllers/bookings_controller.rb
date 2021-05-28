@@ -36,5 +36,3 @@ class BookingsController < ApplicationController
     redirect_to "/users/#{current_user.id}", notice: "Status updated!"
   end
 end
-
-#user.bike.booking
