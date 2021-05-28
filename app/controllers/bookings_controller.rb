@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to bike_bookings_path
+      redirect_to "/users/#{current_user.id}"
     else
       render :new
     end

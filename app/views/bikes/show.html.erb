@@ -13,6 +13,7 @@
       </div>
       <h2 class="card-trip-pricing">99.99 SEK</h2>
       <%= cl_image_tag '11276241_890671564313185_1851098347_n.jpg_fb3oxk', class: "card-trip-user avatar-bordered" %>
+      <%= link_to "Book", new_bike_booking_path(@bike), class: "btn btn-primary mb-3 card-trip-btn" %>
     </div>
   </div>
   <div id="map"
@@ -21,7 +22,5 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-<div class="container">
-  <%= link_to 'Take me for a ride 🚲', new_bike_booking_path(@bike), class: "btn btn-primary mb-3" %>
-</div>
+
 
