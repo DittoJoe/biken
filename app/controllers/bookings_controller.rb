@@ -30,3 +30,5 @@ class BookingsController < ApplicationController
     params.permit(:bike_id, :user_id)
   end
 end
+
+#user.bike.booking
