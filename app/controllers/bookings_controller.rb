@@ -29,6 +29,12 @@ class BookingsController < ApplicationController
   def booking_params
     params.permit(:bike_id, :user_id)
   end
+
+  def change_status
+    @booking = Booking.find(params[:id])
+    @booking.update(status: "#{params[:status]}ed")
+    redirect_to "/users/#{current_user.id}", notice: "Status updated!"
+  end
 end
 
 #user.bike.booking

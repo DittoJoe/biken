@@ -12,4 +12,8 @@ class UserPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def change_status?
+    true
+  end
 end

@@ -1,28 +1,28 @@
-
-  <h1> Hi <%= @user.email %> this are the bikes you have booked</h1>
-
+<h1> Hi <%= @user.email %> this are the bikes you have booked</h1>
   <div class="d-flex flex-row bd-highlight mb-3">
-    <div class="card" style="width: 18rem;">
     <% @bookings.each do |booking| %>
+    <div class="card" style="width: 18rem;">
       <%= cl_image_tag booking.bike.photo.key, class: "card-img-top" %>
       <div class="card-body">
       <h2 class="card-title"><%= booking.bike.name %></h2>
-      <p class="card-text">Your booking is <strong><%= booking.status %></strong>🚲</p>
+      <p class="card-text">Your booking is <strong><%= booking.status %></strong 🚲</p>
+      <%= link_to 'Cancel', change_status_user_path(booking, status: 'cancell'), method: :patch, class: 'btn btn-primary'  %>
       </div>
-    <% end %>
+    <% end %>s
     </div>
   </div>
-
-  <h1>This are your bikes</h1>
+<h1>This are your bikes</h1>
   <div class="d-flex flex-row bd-highlight mb-3">
-    <div class="card" style="width: 18rem;">
     <% @user.bikes.each do |bike| %>
+    <div class="card" style="width: 18rem;">
         <%= cl_image_tag bike.photo.key, class: "card-img-top" %>
         <div class="card-body">
         <h2 class="card-title"><%= bike.name %></h2>
         <p class="card-text"><%= bike.details %></p>
+        <p class="card-text">This booking is <strong>pending</strong 🚲</p>
        </div>
     <% end %>
     </div>
   </div>
+
 
