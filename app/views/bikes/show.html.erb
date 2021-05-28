@@ -11,7 +11,7 @@
         <h3><%= @bike.details %></h3>
         <p><strong>Uploaded by <%= @bike.user.email %></strong></p>
       </div>
-      <h2 class="card-trip-pricing">99.99 SEK</h2>
+      <h2 class="card-trip-pricing"><%= @bike.price %></h2>
       <%= cl_image_tag '11276241_890671564313185_1851098347_n.jpg_fb3oxk', class: "card-trip-user avatar-bordered" %>
     </div>
   </div>
