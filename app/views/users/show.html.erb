@@ -1,31 +1,39 @@
 <div class="container">
-  <h1>Hi <%= @user.email %></h1>
-  <h3>Your bookings</h3>
+    <h1 id="hi-user">Hi <%= @user.email.split("@").first.capitalize %></h1>
+    <h3>Your bookings</h3>
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+        <div class="card-user">
+          <%= cl_image_tag booking.bike.photo.key, class: "image" %>
+          <div class="card-user-infos">
+            <h2><%= booking.bike.name %></h2>
+            <p>Your booking is <strong><%= booking.status %></strong>.</p>
+            <p>     </p>
+            <%= link_to 'Cancel', change_status_user_path(booking, status: 'cancell'), method: :patch, class: 'btn btn-primary'  %>
+          </div>
+        </div>
+      <% end %>
 
-  <% @bookings.each do |booking| %>
-    <div class="card-user">
-      <%= cl_image_tag booking.bike.photo.key, class: "image" %>
-      <div class="card-user-infos">
-        <h2><%= booking.bike.name %></h2>
-        <p>Your booking is <strong><%= booking.status %></strong></p>
-        <%= link_to 'Cancel', change_status_user_path(booking, status: 'cancell'), method: :patch, class: 'btn btn-primary'  %>
-      </div>
     </div>
-  <% end %>
-
-  <h3>Your booking requests</h3>
-  <% @booking_requests.each do |booking| %>
-    <div class="card-user">
-      <%= cl_image_tag booking.bike.photo.key, class: "image" %>
-      <div class="card-user-infos">
-        <h2><%= booking.bike.name %></h2>
-        <h6>Request from <%= booking.user.email %></h6>
-        <p>The status is <strong><%= booking.status %></strong></p>
-        <p> <%= booking.created_at.strftime("%a %b %e %T") %></p>
-        <%= link_to 'Accept', change_status_user_path(booking, status: 'accept'), method: :patch, class: 'btn btn-primary'  %>
-        <%= link_to 'Decline', change_status_user_path(booking, status: 'declin'), method: :patch, class: 'btn btn-primary'  %>
-    </div>
-   </div>
-  <% end %>
+    <h3>Your booking requests</h3>
+     <div class="cards">
+      <% @booking_requests.each do |booking| %>
+        <div class="card-user">
+          <%= cl_image_tag booking.bike.photo.key, class: "image" %>
+          <div class="card-user-infos">
+            <h2><%= booking.bike.name %></h2>
+            <h6>Request from <%= booking.user.email.split("@").first.capitalize %></h6>
+            <p>The status is <strong><%= booking.status %></strong>.</p>
+            <p> <%= booking.created_at.strftime("%a %b %e %T") %></p>
+            <div class="d-flex content-between" >
+              <%= link_to 'Accept', change_status_user_path(booking, status: 'accept'), method: :patch, class: 'btn btn-primary m-3'  %>
+              <%= link_to 'Decline', change_status_user_path(booking, status: 'declin'), method: :patch, class: 'btn btn-primary m-3'  %>
+            </div>
+        </div>
+       </div>
+      <% end %>
+     </div>
 </div>
+
+
 
