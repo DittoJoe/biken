@@ -10,3 +10,21 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.btn-primary {
+  background-color: #b20238;
+  border-color: #b20238;
+  opacity: 0.9;
+}
+
+.btn-primary:hover {
+  background-color: #6b7b8c;
+  opacity: 0.9;
+  border-color: #6b7b8c;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
