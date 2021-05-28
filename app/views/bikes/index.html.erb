@@ -7,7 +7,7 @@
 		<strong><%= bike.name %></strong>
 		<%= cl_image_tag bike.photo.key, class: "bike-card-image" %>
 		<div class="bike-price-info">
-		  <h2>99.99 SEK</h2>
+		  <h2><%= bike.price %></h2>
 		</div>
 	  </div>
 	  <% end %>
