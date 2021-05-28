@@ -10,7 +10,7 @@ class BikesController < ApplicationController
            @bikes
         end
     else
-      flash[:alert] = "please type a city"
+      flash[:alert] = "Please enter a city"
       @bikes = Bike.all
     end
   end

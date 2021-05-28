@@ -13,8 +13,8 @@
           </div>
         </div>
       <% end %>
-    </div>
 
+    </div>
     <h3>Your booking requests</h3>
      <div class="cards">
       <% @booking_requests.each do |booking| %>
@@ -24,7 +24,7 @@
             <h2><%= booking.bike.name %></h2>
             <h6>Request from <%= booking.user.email.split("@").first.capitalize %></h6>
             <p>The status is <strong><%= booking.status %></strong>.</p>
-            <p> <%= booking.created_at %></p>
+            <p> <%= booking.created_at.strftime("%a %b %e %T") %></p>
             <div class="d-flex content-between" >
               <%= link_to 'Accept', change_status_user_path(booking, status: 'accept'), method: :patch, class: 'btn btn-primary m-3'  %>
               <%= link_to 'Decline', change_status_user_path(booking, status: 'declin'), method: :patch, class: 'btn btn-primary m-3'  %>
