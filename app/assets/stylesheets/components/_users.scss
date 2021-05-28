@@ -1,16 +1,22 @@
+#hi-user {
+  color: #bb2b4d
+}
+
 .card-user {
   overflow: hidden;
-  height: 120px;
+  height: 200px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 20px 20px 20px 0px;
+  width: 400px;
+
 }
 
 .card-user .image {
   height: 100%;
-  width: 120px;
+  width: 150px;
   object-fit: cover;
 }
 
@@ -21,7 +27,7 @@
 }
 
 .card-user p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -30,5 +36,6 @@
 
 .card-user .card-user-infos {
   padding: 16px;
-
 }
+
+
