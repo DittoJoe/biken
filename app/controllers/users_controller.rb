@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def change_status
-    @user = User.find(params[:id])
+    @user = current_user
     authorize @user
     @booking = Booking.find(params[:id])
     @booking.update(status: "#{params[:status]}ed")
