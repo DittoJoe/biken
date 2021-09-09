@@ -313,6 +313,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mini_magick
+  minitest (~> 5.10, != 5.10.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
@@ -336,4 +337,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.17
+   2.2.18
